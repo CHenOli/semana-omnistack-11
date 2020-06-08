@@ -15,7 +15,8 @@ module.exports = {
         'ongs.name',
         'ongs.email',
         'ongs.whatsapp',
-        'ongs.uf'
+        'ongs.city',
+        'ongs.uf',
       ]);
 
     response.header('X-Total-Count', count['count(*)']);
@@ -44,8 +45,6 @@ module.exports = {
       .where('id', id)
       .select('ong_id')
       .first();
-
-    console.log(incident.ong_id, ong_id);
 
     if (incident.ong_id !== ong_id) {
       return response.status(401).json({ error: 'Operation not permitted.' });

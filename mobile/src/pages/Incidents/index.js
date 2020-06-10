@@ -6,8 +6,8 @@ import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 
-import logo from '../../assets/logo.png';
 import api from '../../services/api';
+import logo from '../../assets/logo.png';
 
 export default function Incidents() {
   const navigation = useNavigation();
@@ -83,7 +83,7 @@ export default function Incidents() {
               onPress={() => navigateToDetail(incident)}
             >
               <Text style={styles.detailsButtonText}>ver mais detalhes</Text>
-              <Feather name="arrow-right" size={16} color={"#e02041"} />
+              <Feather name="arrow-right" size={16} color="#e02041" />
             </TouchableOpacity>
           </View>
         )}
